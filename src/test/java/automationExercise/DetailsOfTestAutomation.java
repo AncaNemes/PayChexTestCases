@@ -22,31 +22,69 @@ public class DetailsOfTestAutomation {
 
 
         WebElement signIn = driver.findElement(By.xpath("//a[.=' Sign In ']"));
-        Thread.sleep(1000);
+        //Thread.sleep(5000);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         signIn.click();
+
         String userName = "anemes";
-        String password = "V6dA$xc%$ZrADCRv";
+        String password = "PentruInceput22@";
         String securityQ = "ePlan";
 
         WebElement userNameOne = driver.findElement(By.xpath("//input[@name='username']"));
         userNameOne.sendKeys(userName);
+        // driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+
         WebElement passwordOne = driver.findElement(By.xpath("//input[@name='password']"));
         passwordOne.sendKeys(password);
 
+        //driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        // Thread.sleep(3000);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         WebElement signInOne = driver.findElement(By.id("loginButton"));
         signInOne.click();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+     //   Thread.sleep(5000);
 
-        WebElement securityQOne = driver.findElement(By.xpath("//input[@name='securityAnswer']"));
-        securityQOne.sendKeys(securityQ);
-        Thread.sleep(5000);
+      //  WebElement securityQOne = driver.findElement(By.xpath("//input[@name='securityAnswer']"));
+      //  securityQOne.sendKeys(securityQ);
+        //  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+       // Thread.sleep(5000);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         WebElement submitButton = driver.findElement(By.id("submitButton"));
         submitButton.click();
 
+
+
+
+        driver.close();
 
     }
 
 
 /*
+    public static void main(String[] args) {
+
+        String[] user = new String[]{
+          "anemes",
+          "anemes",
+          "anemes",
+
+        };
+
+        for(String user: users){
+            //new user sign up
+            driver.findElement(By.id("email")).sendKeys(email);
+            driver.findElement(By.id("password")).sendKeys("123456");
+            driver.findElement(By.id("submit")).click();
+//new user like
+            driver.findElement(By.id("like")).click();
+//new user log out
+            driver.findElement(By.id("logout")).click();
+        }
+    }
+
+
+
 A user provides the correct username/password combination
 and is logged into their 401k account.
  */
