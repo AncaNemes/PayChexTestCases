@@ -35,48 +35,42 @@ public class TestTwo {
 
         String userOne = "anemes";
         String passwordOne = "passwordFirstAttempt";
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+
         WebElement user = driver.findElement(By.xpath("//input[@name='username']"));
         user.sendKeys(userOne);
         WebElement password = driver.findElement(By.xpath("//input[@name='password']"));
         password.sendKeys(passwordOne);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.findElement(By.id("loginButton")).click();
-
-        // driver.findElement(By.xpath("//input[@name='username']")).sendKeys("userOne");
-        // driver.findElement(By.xpath("//input[@name='password']")).sendKeys("passwordOne");
-
         user.click();
         user.clear();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         password.click();
         password.clear();
-//Thread.sleep(5000);
+        Thread.sleep(4000);
+
         WebElement userT = driver.findElement(By.xpath("//input[@name='username']"));
         userT.sendKeys(userOne);
         WebElement passwordT = driver.findElement(By.xpath("//input[@name='password']"));
         passwordT.sendKeys(passwordOne);
-
+        driver.findElement(By.id("loginButton")).click();
         userT.click();
         userT.clear();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         passwordT.click();
         passwordT.clear();
-//Thread.sleep(5000);
+        Thread.sleep(4000);
 
         WebElement userTh = driver.findElement(By.xpath("//input[@name='username']"));
         userT.sendKeys(userOne);
         WebElement passwordTh = driver.findElement(By.xpath("//input[@name='password']"));
         passwordT.sendKeys(passwordOne);
-
+        driver.findElement(By.id("loginButton")).click();
         userTh.click();
         userTh.clear();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         passwordTh.click();
         passwordTh.clear();
-//Thread.sleep(5000);
+        Thread.sleep(4000);
+
         WebElement accountIsLocked = driver.findElement(By.xpath("//span[.=\'Account is locked due to too many failed attempts.\']"));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         System.out.println("accountIsLocked = " + accountIsLocked.getText());
 
         driver.close();

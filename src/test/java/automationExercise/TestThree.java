@@ -31,19 +31,19 @@ public class TestThree {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.navigate().to("https://bronze.eplan-inc.com/AUDIT/marketing/");
         WebElement signIn = driver.findElement(By.xpath("//a[.=' Sign In ']"));
-      //  Thread.sleep(5000);
         signIn.click();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        Thread.sleep(4000);
+       // driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         WebElement havingTrouble = driver.findElement(By.xpath("//a[.='Having trouble signing in?']"));
         havingTrouble.click();
 
-        //Thread.sleep(5000);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+       // driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         WebElement resetPasswordButton = driver.findElement(By.id("resetPasswordButton"));
         resetPasswordButton.click();
 
-        //Thread.sleep(5000);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        Thread.sleep(4000);
+      //  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         String userName = "anemes";
         WebElement provideUserName = driver.findElement(By.xpath("//input[@ng-model='user.name']"));
         provideUserName.sendKeys(userName);

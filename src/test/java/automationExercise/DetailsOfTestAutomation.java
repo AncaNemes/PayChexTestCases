@@ -22,8 +22,8 @@ public class DetailsOfTestAutomation {
 
 
         WebElement signIn = driver.findElement(By.xpath("//a[.=' Sign In ']"));
-        //Thread.sleep(5000);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        Thread.sleep(5000);
+        // driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         signIn.click();
 
         String userName = "anemes";
@@ -38,22 +38,19 @@ public class DetailsOfTestAutomation {
         passwordOne.sendKeys(password);
 
         //driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-        // Thread.sleep(3000);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        Thread.sleep(3000);
+        //  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         WebElement signInOne = driver.findElement(By.id("loginButton"));
         signInOne.click();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-     //   Thread.sleep(5000);
+        // driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        Thread.sleep(5000);
 
-      //  WebElement securityQOne = driver.findElement(By.xpath("//input[@name='securityAnswer']"));
-      //  securityQOne.sendKeys(securityQ);
+        //  WebElement securityQOne = driver.findElement(By.xpath("//input[@name='securityAnswer']"));
+        //  securityQOne.sendKeys(securityQ);
         //  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-       // Thread.sleep(5000);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
         WebElement submitButton = driver.findElement(By.id("submitButton"));
         submitButton.click();
-
-
 
 
         driver.close();
